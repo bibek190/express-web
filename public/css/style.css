@@ -1,3 +1,111 @@
-h1 {
-  color: red;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.navbar {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  font-size: 2rem;
+  background-color: rgb(163, 101, 25, 0.5);
+}
+.lists {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+.lists a {
+  text-decoration: none;
+  color: black;
+}
+.myName {
+  display: flex;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 0 60px;
+}
+.welcomeMessage {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: brown;
+}
+
+.about {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 60px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+#cityname {
+  width: 40rem;
+}
+.search input {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.tempInfo {
+  display: flex;
+  background-color: rgb(0, 0, 0, 0.1);
+  padding: 0 80px;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.top,
+.bottom {
+  display: flex;
+  padding: 10px 50px;
+  gap: 10px;
+  text-align: center;
+}
+.top p,
+.bottom p {
+  font-size: 1.5rem;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+.middle_layer {
+  display: flex;
+  justify-content: space-around;
+}
+.middle_layer p {
+  font-size: 2rem;
+}
+.data_hide {
+  display: none;
 }

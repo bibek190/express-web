@@ -1,35 +1,37 @@
 const express = require("express");
-const app = express();
 const path = require("path");
 const hbs = require("hbs");
+
+const app = express();
 const port = process.env.PORT || 8000;
 
-// public static path
 const staticPath = path.join(__dirname, "../public");
-const template_path = path.join(__dirname, "../templates/views");
-const partials_path = path.join(__dirname, "../templates/partials");
+const templatePath = path.join(__dirname, "../templates/views");
+const partialsPath = path.join(__dirname, "../templates/partials");
 
 app.set("view engine", "hbs");
-app.set("views", template_path);
-hbs.registerPartials(partials_path);
+app.set("views", templatePath);
+hbs.registerPartials(partialsPath);
 
 app.use(express.static(staticPath));
 
-// routing
-
 app.get("/", (req, res) => {
-  res.render(`index.hbs`);
+  res.render("index");
 });
+
 app.get("/about", (req, res) => {
-  res.render(`about.hbs`);
+  res.render("about");
 });
+
 app.get("/weather", (req, res) => {
-  res.render("weather.hbs");
+  res.render("weather");
 });
 app.use((req, res) => {
-  res.status(404).send("Oops! Page not found.");
+  res.render("404page", {
+    errorMsg: "Opps!! Page not found",
+  });
 });
 
 app.listen(port, () => {
-  console.log(`Listening to the port at ${port}`);
+  console.log(`Listening to the the port no ${port} `);
 });

@@ -5,11 +5,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bibek190/express-web.git"
+  },
+  "author": "bibek",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bibek190/express-web/issues"
+  },
+  "homepage": "https://github.com/bibek190/express-web#readme",
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
+    "handlebars": "^4.7.8",
     "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "prettier-plugin-handlebars": "^3.0.2"
   }
 }
